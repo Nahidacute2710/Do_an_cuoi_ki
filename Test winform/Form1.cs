@@ -20,6 +20,7 @@ namespace Test_winform
         public FormDangNhap()
         {
             InitializeComponent();
+            his.FormClosed += FormDangNhap_FormClosed;
             cay.ChenThongTin(123, "Đinh Hoàng Nhã", "nha123", "quê quán hà nội, sinh viên", "sống tại quận 10 TPHCM");
             cay.ChenThongTin(467, "Đức Thành", "thanh718", "sinh viên, sinh 2006, yêu Duy Lợi", "Thủ Đức");
             cay.ChenThongTin(890, "Duy Lợi", "duyloi123", "sinh viên, sinh 2006, yêu Đức Thành", "Nhà Thành");
@@ -69,6 +70,10 @@ namespace Test_winform
         {
             Application.Exit();
         }
-       
+       private void FormDangNhap_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
     }
 }
